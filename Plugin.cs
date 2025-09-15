@@ -49,6 +49,7 @@ namespace GTPCPrivacy
             screenText.transform.localPosition = new Vector3(174.6985f, -150f, 0);
             
             proButton.transform.position = new Vector3(977.6f, 193.896f, 4f); // too lazy to do this properly in unity
+            proButton.transform.localPosition = new Vector3(30f, -346.104f, 4f);
         }
 
         public AssetBundle LoadAssetBundle(string path)
@@ -80,4 +81,5 @@ namespace GTPCPrivacy
         // if you somehow reached here without puking then congrats1!1!1!!!
 
         }
+
     }
