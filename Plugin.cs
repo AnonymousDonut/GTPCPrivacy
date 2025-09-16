@@ -17,8 +17,7 @@ namespace GTPCPrivacy
         public static AssetBundle bundle;
         public static GameObject assetBundleParent;
         private Button proButton;
-        private TextMeshProUGUI screenText;
-        private bool isHid = false;
+        private TextMeshProUGUI screenText
         
         void Start() => GorillaTagger.OnPlayerSpawned(OnGameInitialized);
 
@@ -26,8 +25,6 @@ namespace GTPCPrivacy
         {
 
             bundle = LoadAssetBundle("GTPCPrivacy.AssetBundles.hider"); 
-
-            isHid = true;
 
             assetBundleParent = Instantiate(bundle.LoadAsset<GameObject>("hider"));
             
@@ -58,7 +55,6 @@ namespace GTPCPrivacy
         {
                 proButton.onClick.AddListener(() =>
                     {
-                        isHid = !isHid;
                         assetBundleParent.transform.Find("Canvas/Panel").gameObject.SetActive(isHid);
                     }
                 );
@@ -75,4 +71,5 @@ namespace GTPCPrivacy
         }
 
     }
+
 
