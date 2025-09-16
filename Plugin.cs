@@ -20,13 +20,7 @@ namespace GTPCPrivacy
         private TextMeshProUGUI screenText;
         private bool isHid = false;
         
-        // Only read this if you aren't going to absolutely obliterate me
-
-        void Start()
-        {
-            GorillaTagger.OnPlayerSpawned(OnGameInitialized);
-        }
-
+        void Start() => GorillaTagger.OnPlayerSpawned(OnGameInitialized);
 
         void OnGameInitialized()
         {
@@ -45,10 +39,10 @@ namespace GTPCPrivacy
 
             proButton = assetBundleParent.GetComponentInChildren<Button>();
 
-            screenText = assetBundleParent.transform.Find("Canvas/Panel/Text (TMP)").GetComponent<TextMeshProUGUI>();  // dont kill me for transform.find pwetty pwease
+            screenText = assetBundleParent.transform.Find("Canvas/Panel/Text (TMP)").GetComponent<TextMeshProUGUI>();  
             screenText.transform.localPosition = new Vector3(174.6985f, -150f, 0);
             
-            proButton.transform.position = new Vector3(977.6f, 193.896f, 4f); // too lazy to do this properly in unity
+            proButton.transform.position = new Vector3(977.6f, 193.896f, 4f);
             proButton.transform.localPosition = new Vector3(30f, -346.104f, 4f);
         }
 
@@ -77,9 +71,8 @@ namespace GTPCPrivacy
                     proButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "SHOW GAME FROM PC"; 
                 }
         }
-
-        // if you somehow reached here without puking then congrats1!1!1!!!
-
+        
         }
 
     }
+
